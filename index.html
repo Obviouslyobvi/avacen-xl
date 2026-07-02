@@ -42,11 +42,15 @@
   .stickybar .btn{font-size:15px;padding:10px 24px;box-shadow:none;}
 
   /* Hero */
-  .hero{background:linear-gradient(180deg,var(--cream) 0%,#fff 100%);padding:150px 0 70px;text-align:center;}
-  .hero h1{font-size:clamp(34px,5.4vw,58px);max-width:900px;margin:0 auto 24px;}
+  .hero{background:linear-gradient(180deg,var(--cream) 0%,#fff 100%);padding:140px 0 70px;}
+  .hgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
+  .hero h1{font-size:clamp(32px,4.4vw,50px);margin-bottom:22px;}
   .hero h1 em{font-style:normal;color:var(--amber-dark);}
-  .hero .lede{font-size:clamp(18px,2.2vw,22px);color:var(--soft);max-width:720px;margin:0 auto 36px;}
-  .trustbar{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px;margin-top:44px;font-size:14px;font-weight:600;color:var(--soft);}
+  .hero .lede{font-size:clamp(17px,2vw,20px);color:var(--soft);margin-bottom:32px;}
+  .heropic{text-align:center;}
+  .heropic img{max-width:100%;height:auto;filter:drop-shadow(0 24px 44px rgba(22,40,63,.22));}
+  .heropic .picnote{font-size:13.5px;color:var(--soft);margin-top:10px;}
+  .trustbar{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px;margin-top:50px;font-size:14px;font-weight:600;color:var(--soft);}
   .trustbar div::before{content:"✓";color:var(--green);font-weight:700;margin-right:7px;}
 
   /* Empathy */
@@ -138,7 +142,10 @@
   footer strong{color:#c6d2e0;}
 
   @media(max-width:860px){
-    .steps,.bgrid,.tgrid{grid-template-columns:1fr;}
+    .steps,.bgrid,.tgrid,.hgrid{grid-template-columns:1fr;}
+    .hero{text-align:center;}
+    .heropic{order:-1;}
+    .heropic img{max-width:320px;}
     .proof-stats{grid-template-columns:repeat(2,1fr);}
     .vidrow{grid-template-columns:1fr;}
     section{padding:60px 0;}
@@ -162,11 +169,19 @@
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="wrap">
-    <span class="eyebrow">FDA-Cleared Class II Medical Device &bull; Drug-Free &bull; Noninvasive</span>
-    <h1>Ease Your Arthritis Joint Pain in <em>20 Minutes a Day</em>. No Pills. No Needles. No Side Effects.</h1>
-    <p class="lede">You place one hand inside the AVACEN XL. Gentle warmth and a light vacuum go to work through your palm, and soothing relief travels through your whole body. That's it. That's the treatment.</p>
-    <a href="#offer" class="btn">Yes, I Want Drug-Free Relief</a>
-    <span class="btn-sub">30-day money-back guarantee &bull; 3-year warranty &bull; Made in the USA</span>
+    <div class="hgrid">
+      <div>
+        <span class="eyebrow">FDA-Cleared Class II Medical Device &bull; Drug-Free &bull; Noninvasive</span>
+        <h1>Ease Your Arthritis Joint Pain in <em>20 Minutes a Day</em>. No Pills. No Needles. No Side Effects.</h1>
+        <p class="lede">You place one hand inside the AVACEN XL. Gentle warmth and a light vacuum go to work through your palm, and soothing relief travels through your whole body. That's it. That's the treatment.</p>
+        <a href="#offer" class="btn">Yes, I Want Drug-Free Relief</a>
+        <span class="btn-sub">30-day money-back guarantee &bull; 3-year warranty &bull; Made in the USA</span>
+      </div>
+      <div class="heropic">
+        <img src="assets/avacen-xl.jpg" alt="The AVACEN XL device with color touch screen and hand chamber" width="560" height="560">
+        <p class="picnote">The AVACEN XL. Your hand rests inside the chamber. The warmth does the rest.</p>
+      </div>
+    </div>
     <div class="trustbar">
       <div>FDA-Cleared</div>
       <div>40+ Million Treatments</div>
@@ -424,6 +439,7 @@
       <p>Think about what you spend on relief that doesn't last: pills, creams, copays, massage appointments. Over three warrantied years, the AVACEN XL works out to about <strong>$4 a day</strong>, for a treatment your whole body shares and no prescription can match.</p>
     </div>
     <div class="offerbox">
+      <img src="assets/avacen-xl.jpg" alt="The AVACEN XL device" style="max-width:280px;height:auto;margin:0 auto 10px;display:block;filter:drop-shadow(0 14px 26px rgba(22,40,63,.18));">
       <span class="eyebrow" style="margin-bottom:6px;">AVACEN XL with 3-Year Warranty</span>
       <div class="was">$4,995</div>
       <div class="now">$4,495</div>
