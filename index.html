@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVACEN XL | Drug-Free Arthritis Joint Pain Relief in 20 Minutes a Day</title>
+<meta name="description" content="The AVACEN XL is an FDA-cleared, drug-free medical device for temporary relief of joint pain associated with arthritis. One hand. Twenty minutes. Whole-body relief.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#16283f;
+    --ink:#2b3a4e;
+    --soft:#5b6b7d;
+    --amber:#e0762e;
+    --amber-dark:#c25f1c;
+    --cream:#faf6f0;
+    --card:#ffffff;
+    --line:#e8e2d8;
+    --green:#2e7d5b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65;font-size:17px;}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--navy);line-height:1.15;}
+  h2{font-size:clamp(28px,4vw,42px);margin-bottom:18px;}
+  p{margin-bottom:18px;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  .narrow{max-width:760px;margin:0 auto;}
+  section{padding:80px 0;}
+  .eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-dark);margin-bottom:16px;}
+  .btn{display:inline-block;background:var(--amber);color:#fff;font-weight:700;font-size:18px;padding:18px 40px;border-radius:50px;text-decoration:none;box-shadow:0 6px 20px rgba(224,118,46,.35);transition:transform .15s,box-shadow .15s;}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(224,118,46,.45);}
+  .btn-sub{display:block;font-size:13px;font-weight:500;color:var(--soft);margin-top:12px;}
+
+  /* Sticky bar */
+  .stickybar{position:fixed;top:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:100;padding:10px 0;}
+  .stickybar .wrap{display:flex;align-items:center;justify-content:space-between;}
+  .brand{font-family:'Fraunces',serif;font-weight:700;font-size:20px;color:var(--navy);text-decoration:none;}
+  .brand span{color:var(--amber);}
+  .stickybar .btn{font-size:15px;padding:10px 24px;box-shadow:none;}
+
+  /* Hero */
+  .hero{background:linear-gradient(180deg,var(--cream) 0%,#fff 100%);padding:150px 0 70px;text-align:center;}
+  .hero h1{font-size:clamp(34px,5.4vw,58px);max-width:900px;margin:0 auto 24px;}
+  .hero h1 em{font-style:normal;color:var(--amber-dark);}
+  .hero .lede{font-size:clamp(18px,2.2vw,22px);color:var(--soft);max-width:720px;margin:0 auto 36px;}
+  .trustbar{display:flex;flex-wrap:wrap;justify-content:center;gap:14px 34px;margin-top:44px;font-size:14px;font-weight:600;color:var(--soft);}
+  .trustbar div::before{content:"✓";color:var(--green);font-weight:700;margin-right:7px;}
+
+  /* Empathy */
+  .empathy{background:var(--navy);color:#e9eef5;}
+  .empathy h2{color:#fff;}
+  .empathy p{color:#c6d2e0;font-size:18px;}
+  .empathy .turn{color:#fff;font-weight:600;font-size:20px;}
+
+  /* Steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:44px 0;}
+  .step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px 26px;}
+  .step .num{width:44px;height:44px;border-radius:50%;background:var(--amber);color:#fff;font-weight:700;font-size:20px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-family:'Fraunces',serif;}
+  .step h3{font-size:21px;margin-bottom:10px;}
+  .step p{margin:0;color:var(--soft);font-size:15.5px;}
+
+  /* Science box */
+  .science{background:var(--cream);border-radius:20px;padding:44px;margin-top:40px;}
+  .science h3{font-size:24px;margin-bottom:14px;}
+
+  /* Video */
+  .video{position:relative;padding-bottom:56.25%;height:0;border-radius:16px;overflow:hidden;box-shadow:0 14px 40px rgba(22,40,63,.18);margin:36px 0;}
+  .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+  .vidcap{text-align:center;font-size:14px;color:var(--soft);margin-top:-20px;margin-bottom:30px;}
+
+  /* Benefits */
+  .benefits{background:var(--cream);}
+  .bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:44px;}
+  .bcard{background:#fff;border-radius:16px;padding:32px 28px;border:1px solid var(--line);}
+  .bcard .ico{font-size:30px;margin-bottom:14px;}
+  .bcard h3{font-size:20px;margin-bottom:10px;}
+  .bcard p{margin:0;color:var(--soft);font-size:15.5px;}
+
+  /* Testimonials */
+  .tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:44px 0;}
+  .tcard{background:var(--cream);border-radius:16px;padding:32px 28px;position:relative;}
+  .tcard .quote{font-family:'Fraunces',serif;font-size:19px;color:var(--navy);margin-bottom:18px;line-height:1.45;}
+  .tcard .who{font-size:14px;font-weight:600;color:var(--amber-dark);}
+  .tcard .cond{font-size:13px;color:var(--soft);}
+  .stars{color:var(--amber);letter-spacing:2px;margin-bottom:12px;}
+  .vidrow{display:grid;grid-template-columns:1fr 1fr;gap:28px;}
+  .vidrow .video{margin:0;}
+
+  /* Proof */
+  .proof{background:var(--navy);color:#dbe4ef;}
+  .proof h2{color:#fff;}
+  .proof-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin:48px 0;}
+  .pstat{text-align:center;padding:28px 14px;background:rgba(255,255,255,.06);border-radius:14px;}
+  .pstat .big{font-family:'Fraunces',serif;font-size:clamp(26px,3.4vw,40px);font-weight:700;color:var(--amber);display:block;}
+  .pstat .lbl{font-size:13.5px;color:#a9b8ca;margin-top:6px;display:block;}
+  .indbox{background:rgba(255,255,255,.06);border-left:4px solid var(--amber);border-radius:0 14px 14px 0;padding:28px 32px;margin:36px 0;}
+  .indbox h3{color:#fff;font-size:20px;margin-bottom:12px;}
+  .indbox li{margin:8px 0 8px 20px;color:#c6d2e0;}
+
+  /* Compare */
+  .compare table{width:100%;border-collapse:collapse;margin-top:36px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(22,40,63,.08);}
+  .compare th,.compare td{padding:16px 18px;text-align:center;font-size:15px;border-bottom:1px solid var(--line);}
+  .compare th{background:var(--navy);color:#fff;font-weight:600;}
+  .compare td:first-child{text-align:left;font-weight:600;color:var(--navy);}
+  .compare .yes{color:var(--green);font-weight:700;}
+  .compare .no{color:#b3432e;font-weight:700;}
+  .compare th.hl{background:var(--amber);}
+
+  /* Offer */
+  .offer{background:var(--cream);}
+  .offerbox{background:#fff;border:2px solid var(--amber);border-radius:24px;max-width:640px;margin:44px auto 0;padding:48px 44px;text-align:center;box-shadow:0 20px 50px rgba(22,40,63,.12);}
+  .offerbox .was{font-size:20px;color:var(--soft);text-decoration:line-through;}
+  .offerbox .now{font-family:'Fraunces',serif;font-size:56px;font-weight:700;color:var(--navy);line-height:1;margin:8px 0 4px;}
+  .offerbox .save{display:inline-block;background:#e9f5ef;color:var(--green);font-weight:700;font-size:14px;padding:6px 16px;border-radius:30px;margin-bottom:26px;}
+  .offerbox ul{list-style:none;text-align:left;margin:0 auto 30px;max-width:420px;}
+  .offerbox li{padding:9px 0;border-bottom:1px dashed var(--line);font-size:15.5px;}
+  .offerbox li::before{content:"✓";color:var(--green);font-weight:700;margin-right:10px;}
+  .guarantee{display:flex;gap:20px;align-items:center;max-width:640px;margin:36px auto 0;background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 30px;}
+  .guarantee .shield{font-size:44px;}
+  .guarantee p{margin:0;font-size:15px;color:var(--soft);}
+  .guarantee strong{color:var(--navy);}
+
+  /* FAQ */
+  details{border-bottom:1px solid var(--line);padding:20px 0;}
+  summary{font-weight:600;font-size:18px;color:var(--navy);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;}
+  summary::after{content:"+";font-size:26px;color:var(--amber);font-weight:400;}
+  details[open] summary::after{content:"–";}
+  details p{margin:14px 0 0;color:var(--soft);}
+
+  /* Close */
+  .close-sec{text-align:center;}
+  .close-sec .ps{max-width:640px;margin:30px auto 0;font-style:italic;color:var(--soft);}
+
+  footer{background:var(--navy);color:#8fa1b5;padding:56px 0;font-size:13px;line-height:1.7;}
+  footer strong{color:#c6d2e0;}
+
+  @media(max-width:860px){
+    .steps,.bgrid,.tgrid{grid-template-columns:1fr;}
+    .proof-stats{grid-template-columns:repeat(2,1fr);}
+    .vidrow{grid-template-columns:1fr;}
+    section{padding:60px 0;}
+    .hero{padding-top:120px;}
+    .science{padding:30px 24px;}
+    .offerbox{padding:36px 24px;}
+    .compare{overflow-x:auto;}
+    .compare table{min-width:640px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="stickybar">
+  <div class="wrap">
+    <a href="#top" class="brand">AVACEN<span> XL</span></a>
+    <a href="#offer" class="btn">Get Relief Now</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">FDA-Cleared Class II Medical Device &bull; Drug-Free &bull; Noninvasive</span>
+    <h1>Ease Your Arthritis Joint Pain in <em>20 Minutes a Day</em>. No Pills. No Needles. No Side Effects.</h1>
+    <p class="lede">You place one hand inside the AVACEN XL. Gentle warmth and a light vacuum go to work through your palm, and soothing relief travels through your whole body. That's it. That's the treatment.</p>
+    <a href="#offer" class="btn">Yes, I Want Drug-Free Relief</a>
+    <span class="btn-sub">30-day money-back guarantee &bull; 3-year warranty &bull; Made in the USA</span>
+    <div class="trustbar">
+      <div>FDA-Cleared</div>
+      <div>40+ Million Treatments</div>
+      <div>20 U.S. &amp; International Patents</div>
+      <div>Zero Drugs, Zero Prescriptions</div>
+    </div>
+  </div>
+</section>
+
+<!-- EMPATHY -->
+<section class="empathy">
+  <div class="wrap narrow">
+    <span class="eyebrow">If You Live With Arthritis, You Already Know</span>
+    <h2>You Know the Routine by Heart</h2>
+    <p>The slow, careful first steps out of bed. The jar lid you hand to someone else. The stairs you take one at a time, gripping the rail. The knees that forecast the weather better than the evening news.</p>
+    <p>And the pills. Always the pills. You count them, time them, worry about what they're doing to your stomach, your liver, your kidneys. The relief fades, and the bottle gets lighter, and next month you buy another one.</p>
+    <p>You've tried the creams that smell like a locker room. The wraps. The heating pad that warms one knee while the other one aches, jealous.</p>
+    <p class="turn">Now imagine a different routine. You sit in your favorite chair. You slip your hand into a warm chamber. You watch TV for 20 minutes. And soothing warmth spreads through your whole body, easing the joint pain and stiffness of arthritis, naturally, with no drugs at all.</p>
+    <p>That's not a fantasy. It's an FDA-cleared medical device with over 40 million treatments behind it. And it's waiting for your hand.</p>
+  </div>
+</section>
+
+<!-- INTRO + HOW IT WORKS -->
+<section>
+  <div class="wrap">
+    <div class="narrow" style="text-align:center;">
+      <span class="eyebrow">Meet the AVACEN XL</span>
+      <h2>Your Whole Body Feels Better. And All You Do Is Give It a Hand.</h2>
+      <p>The AVACEN XL is a noninvasive, over-the-counter heat therapy system, FDA-cleared for the temporary relief of joint pain associated with arthritis, plus minor muscle and joint pain, stiffness, muscle spasms, and more. You use it at home, fully clothed, sitting down. Here's how simple your new routine gets:</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">1</div>
+        <h3>Slip Your Hand In</h3>
+        <p>Put on a soft, single-use mitt and rest your hand inside the AVACEN chamber. No straps to fight, no wraps to wrestle. Kind to arthritic fingers.</p>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <h3>Relax for 20 Minutes</h3>
+        <p>Gentle warmth and a light vacuum work together through your palm. You read, watch TV, or just breathe. The device does everything else.</p>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <h3>Feel Relief Spread</h3>
+        <p>Your warmed blood circulates naturally through your entire body, easing joint pain and stiffness far beyond the hand it started in.</p>
+      </div>
+    </div>
+
+    <div class="science narrow">
+      <h3>Why Your Palm Is the Secret Doorway to Whole-Body Relief</h3>
+      <p>Your palm holds a remarkable network of blood vessels called arteriovenous anastomoses, or AVAs. They're your body's built-in radiator, designed to move heat fast. When they open, blood can flow through an AVA at up to 1,000 times the rate of a tiny capillary.</p>
+      <p>The AVACEN uses that doorway in reverse. Its patented combination of gentle heat and negative pressure keeps the vessels in your hand open and warms the blood flowing through them. That warmth slightly thins your blood, and thinner blood glides more easily into the small vessels throughout your body, boosting microcirculation, carrying oxygen in and waste out, and delivering the temporary relief of joint pain and stiffness you've been chasing with pills.</p>
+      <p style="margin:0;"><strong>One hand in. Whole body better. In about 20 minutes.</strong></p>
+    </div>
+
+    <div class="narrow">
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/aBs877g4O-k" title="AVACEN: How It Works" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="vidcap">Watch: How the AVACEN Treatment Method works (2 minutes)</p>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="wrap">
+    <div class="narrow" style="text-align:center;">
+      <span class="eyebrow">What This Means for You</span>
+      <h2>Every Benefit Points the Same Direction: You Get Your Life Back</h2>
+    </div>
+    <div class="bgrid">
+      <div class="bcard">
+        <div class="ico">💊</div>
+        <h3>Relief Without the Pill Bottle</h3>
+        <p>No drugs means no drug side effects. Nothing to upset your stomach, tax your liver, or interact with the medications you already take. Just your own warmed blood doing what it was designed to do.</p>
+      </div>
+      <div class="bcard">
+        <div class="ico">🌡️</div>
+        <h3>Whole-Body Relief From One Hand</h3>
+        <p>A heating pad warms one spot. The AVACEN warms your circulation itself, so relief reaches your knees, hips, shoulders, back, and both hands, all in the same 20-minute session.</p>
+      </div>
+      <div class="bcard">
+        <div class="ico">🛋️</div>
+        <h3>Treatment That Feels Like a Break</h3>
+        <p>You do it from your recliner with the TV on. No gym clothes, no appointments, no driving across town, no waiting rooms. Twenty minutes you'd have spent sitting anyway.</p>
+      </div>
+      <div class="bcard">
+        <div class="ico">🤲</div>
+        <h3>Gentle on Arthritic Hands</h3>
+        <p>No buckles, dials, or fiddly straps to fight with sore fingers. Slip on a soft mitt, rest your hand inside, and press start on the bright color touch screen. That's the whole setup.</p>
+      </div>
+      <div class="bcard">
+        <div class="ico">🌅</div>
+        <h3>Easier Mornings, Freer Days</h3>
+        <p>Temporary relief of joint pain and stiffness means the small victories come back: jar lids, garden gloves, grandkids lifted, stairs taken like you used to take them.</p>
+      </div>
+      <div class="bcard">
+        <div class="ico">🛡️</div>
+        <h3>Safe Enough to Use Every Day</h3>
+        <p>Over 40 million treatments delivered since 2009. It's an FDA-cleared, over-the-counter Class II device, so gentle you can build it into your daily routine like a cup of coffee.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="wrap">
+    <div class="narrow" style="text-align:center;">
+      <span class="eyebrow">Real People. Real Relief.</span>
+      <h2>Don't Take Our Word for It. Take Theirs.</h2>
+    </div>
+    <div class="tgrid">
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"For the next 5 to 7 days, no pain whatsoever... I felt much more rejuvenated, much fresher."</p>
+        <div class="who">Eva &bull; Beverly Hills, CA</div>
+        <div class="cond">Lives with rheumatoid arthritis</div>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"All of a sudden, I started doing things without thinking. I just returned to normal function."</p>
+        <div class="who">Lynn C. &bull; Santa Barbara, CA</div>
+        <div class="cond">Hand pain limited her daily life</div>
+      </div>
+      <div class="tcard">
+        <div class="stars">★★★★★</div>
+        <p class="quote">"I cannot believe the results I am getting. The biggest thing for me is that I don't have to take any medication."</p>
+        <div class="who">Stephanie F. &bull; Las Vegas, NV</div>
+        <div class="cond">Back fusion surgery, neck disc damage</div>
+      </div>
+    </div>
+    <div class="narrow" style="text-align:center;margin-bottom:36px;">
+      <p style="font-family:'Fraunces',serif;font-size:22px;color:var(--navy);">"We've used this machine over 5,000 treatments... it is safe, it is effective, and I recommend it to all my patients."</p>
+      <p style="font-size:14px;color:var(--soft);">A practicing physician, from AVACEN's practitioner reviews</p>
+    </div>
+    <div class="vidrow">
+      <div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/GDzHim0rjHU" title="Arthritis and AVACEN Pain Relief" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="vidcap">Justine shares her arthritis relief story</p>
+      </div>
+      <div>
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/_BE1waxcKsM" title="Eva's AVACEN Experience" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <p class="vidcap">Eva's experience with rheumatoid arthritis</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="proof">
+  <div class="wrap">
+    <div class="narrow" style="text-align:center;">
+      <span class="eyebrow" style="color:var(--amber);">The Proof Behind the Promise</span>
+      <h2>This Isn't a Gadget. It's a Medical Device With Receipts.</h2>
+    </div>
+    <div class="proof-stats">
+      <div class="pstat"><span class="big">40M+</span><span class="lbl">Safe treatments delivered since 2009</span></div>
+      <div class="pstat"><span class="big">20</span><span class="lbl">U.S. and international patents</span></div>
+      <div class="pstat"><span class="big">Class II</span><span class="lbl">FDA-cleared OTC medical device</span></div>
+      <div class="pstat"><span class="big">USA</span><span class="lbl">Designed and made in America</span></div>
+    </div>
+    <div class="indbox narrow">
+      <h3>FDA-Cleared Indications: What the AVACEN Is Cleared to Do for You</h3>
+      <ul>
+        <li>Temporary relief of joint pain associated with <strong>arthritis</strong></li>
+        <li>Temporary relief of minor muscle and joint pain and stiffness</li>
+        <li>Temporary relief of muscle spasms, minor strains, and minor sprains</li>
+        <li>Muscular relaxation</li>
+        <li>Temporary increase in local blood circulation</li>
+      </ul>
+    </div>
+    <div class="narrow">
+      <p>The AVACEN Treatment Method has been put under the microscope, literally. In a registered clinical trial (ClinicalTrials.gov ID NCT01619579), participants with chronic widespread pain used the AVACEN at home. Company-reported follow-up results, presented at the Society for Neuroscience annual meeting, showed a reduction of more than 40% in the widespread pain index over 28 days of use.</p>
+      <p>The device has also been featured in the Biohack Yourself documentary alongside leaders in longevity and wellness. Watch the segment below.</p>
+      <div class="video">
+        <iframe src="https://player.vimeo.com/video/1071963173?h=3b3a86006c" title="AVACEN in the Biohack Yourself documentary" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="compare">
+  <div class="wrap">
+    <div class="narrow" style="text-align:center;">
+      <span class="eyebrow">The Honest Comparison</span>
+      <h2>What You're Using Now vs. What You Could Be Using</h2>
+    </div>
+    <table>
+      <tr>
+        <th></th>
+        <th>Pain Pills</th>
+        <th>Topical Creams</th>
+        <th>Heating Pad</th>
+        <th class="hl">AVACEN XL</th>
+      </tr>
+      <tr>
+        <td>Drug-free</td>
+        <td class="no">No</td>
+        <td class="no">No</td>
+        <td class="yes">Yes</td>
+        <td class="yes">Yes</td>
+      </tr>
+      <tr>
+        <td>Whole-body relief</td>
+        <td class="yes">Yes</td>
+        <td class="no">One spot</td>
+        <td class="no">One spot</td>
+        <td class="yes">Yes</td>
+      </tr>
+      <tr>
+        <td>No stomach, liver, or kidney worries</td>
+        <td class="no">No</td>
+        <td class="yes">Yes</td>
+        <td class="yes">Yes</td>
+        <td class="yes">Yes</td>
+      </tr>
+      <tr>
+        <td>FDA-cleared medical device</td>
+        <td class="no">N/A</td>
+        <td class="no">No</td>
+        <td class="no">Rarely</td>
+        <td class="yes">Yes</td>
+      </tr>
+      <tr>
+        <td>Ongoing monthly cost</td>
+        <td class="no">Forever</td>
+        <td class="no">Forever</td>
+        <td class="yes">None</td>
+        <td class="yes">Pennies (mitts)</td>
+      </tr>
+      <tr>
+        <td>Improves microcirculation</td>
+        <td class="no">No</td>
+        <td class="no">No</td>
+        <td class="no">Local only</td>
+        <td class="yes">Yes, systemically</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="offer" id="offer">
+  <div class="wrap">
+    <div class="narrow" style="text-align:center;">
+      <span class="eyebrow">Your Next 20 Minutes Could Change Your Next 20 Years</span>
+      <h2>Bring the AVACEN XL Home</h2>
+      <p>Think about what you spend on relief that doesn't last: pills, creams, copays, massage appointments. Over three warrantied years, the AVACEN XL works out to about <strong>$4 a day</strong>, for a treatment your whole body shares and no prescription can match.</p>
+    </div>
+    <div class="offerbox">
+      <span class="eyebrow" style="margin-bottom:6px;">AVACEN XL with 3-Year Warranty</span>
+      <div class="was">$4,995</div>
+      <div class="now">$4,495</div>
+      <span class="save">You save $500 today</span>
+      <ul>
+        <li>AVACEN XL device with color touch screen</li>
+        <li>25 AVACEN treatment mitts included</li>
+        <li>Full 36-month manufacturer warranty</li>
+        <li>Upgrade privilege: trade up to any AVACEN device for 50% of retail while under warranty</li>
+        <li>Power supply, cord, and complete user guide</li>
+        <li>Proudly made in the USA</li>
+      </ul>
+      <a class="btn" href="https://shop.avacen.com/collections/devices/products/avacen-home-xl%E2%84%A2-with-3-year-warranty">Order Your AVACEN XL Now</a>
+      <span class="btn-sub">Secure checkout at shop.avacen.com</span>
+    </div>
+    <div class="guarantee">
+      <div class="shield">🛡️</div>
+      <p><strong>Try it in your own home for 30 days.</strong> Use it in your chair, on your schedule, on your worst mornings. If you're not satisfied, return it within 30 days under AVACEN's money-back guarantee (a 15% restocking fee applies). The stiffness you know is guaranteed to stay. The device isn't. That's the point.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap narrow">
+    <span class="eyebrow">Questions You're Probably Asking</span>
+    <h2>Fair Questions, Straight Answers</h2>
+    <details open>
+      <summary>Is this safe for someone my age, with my health history?</summary>
+      <p>The AVACEN is an FDA-cleared, over-the-counter Class II device with more than 40 million treatments delivered since 2009. It's noninvasive and drug-free. As with any therapy, if you have specific medical conditions, check with your doctor first. Most people are pleasantly surprised at how gentle it feels: comfortable warmth on the palm, nothing more.</p>
+    </details>
+    <details>
+      <summary>How is warming one hand supposed to help my knees and hips?</summary>
+      <p>Your palm contains AVAs, high-volume blood vessels built to move heat fast. The AVACEN warms the blood flowing through them, which slightly thins it and improves microcirculation throughout your body. Relief travels with your own bloodstream, which visits every joint you own.</p>
+    </details>
+    <details>
+      <summary>How often do I use it?</summary>
+      <p>A standard session takes about 20 minutes, and the device is designed for regular home use. Many owners make it part of their daily routine, morning coffee in one hand, AVACEN on the other.</p>
+    </details>
+    <details>
+      <summary>Does it hurt?</summary>
+      <p>No. You feel gentle warmth and a light suction on your hand, like a warm handshake that lasts 20 minutes. Most users read or watch TV during treatment.</p>
+    </details>
+    <details>
+      <summary>What are the mitts, and why do I need them?</summary>
+      <p>They're soft single-use liners that keep treatment hygienic and effective. Your device ships with 25, replacements cost pennies per treatment, and using them keeps your 3-year warranty intact.</p>
+    </details>
+    <details>
+      <summary>What if it doesn't work for me?</summary>
+      <p>You have 30 days to find out in your own home, backed by a money-back guarantee (15% restocking fee). And your device carries a full 3-year manufacturer warranty, with the option to upgrade to any AVACEN model for 50% of retail while it's under warranty.</p>
+    </details>
+    <details>
+      <summary>Will it cure my arthritis?</summary>
+      <p>No, and anyone who promises that is selling you something dishonest. The AVACEN is FDA-cleared for the temporary relief of joint pain associated with arthritis, along with minor muscle and joint pain, stiffness, spasms, and improved local circulation. Temporary, repeatable, drug-free relief is exactly what it delivers, and for most people living with arthritis, that's the difference between managing pain and being managed by it.</p>
+    </details>
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="close-sec" style="padding-top:20px;">
+  <div class="wrap narrow">
+    <h2>Twenty Minutes From Now, You Could Be in Your Chair, Hand in the Warmth, Pain Loosening Its Grip.</h2>
+    <p>Or you could be reading the label on another bottle of pills.</p>
+    <p>You've spent years finding out what doesn't work. This is the one your own circulation delivers, cleared by the FDA, proven across 40 million treatments, and guaranteed in your home for 30 days.</p>
+    <a href="https://shop.avacen.com/collections/devices/products/avacen-home-xl%E2%84%A2-with-3-year-warranty" class="btn">Get Your AVACEN XL Today</a>
+    <span class="btn-sub">$500 off &bull; 3-year warranty &bull; 30-day guarantee</span>
+    <p class="ps">P.S. The $500 savings reflects current sale pricing and can end without notice. If your hands ache while you're reading this, you already know why waiting costs more than acting.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Important information.</strong> The AVACEN XL is an FDA-cleared, over-the-counter Class II medical device indicated for the temporary relief of minor muscle and joint pain and stiffness; the temporary relief of joint pain associated with arthritis, muscle spasms, minor strains, and minor sprains; muscular relaxation; and the temporary increase in local circulation where applied. It is not intended to diagnose, treat, cure, or prevent any disease. Individual results vary. Testimonials reflect individual experiences and are not a guarantee of results. Consult your physician before beginning any new therapy, especially if you have a medical condition or use prescription medication.</p>
+    <p>Clinical reference: ClinicalTrials.gov Identifier NCT01619579. Study results as reported by the manufacturer. Pricing, warranty, upgrade, and return terms are set by AVACEN Medical at shop.avacen.com and may change. A 15% restocking fee applies to returns under the 30-day guarantee. Warranty requires use of AVACEN Mitts.</p>
+    <p>AVACEN® is a registered trademark of AVACEN Medical. This page is an independent marketing presentation.</p>
+  </div>
+</footer>
+
+</body>
+</html>
