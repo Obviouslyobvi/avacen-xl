@@ -22,7 +22,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65;font-size:17px;}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.7;font-size:18px;}
   h1,h2,h3{font-family:'Fraunces',Georgia,serif;color:var(--navy);line-height:1.15;}
   h2{font-size:clamp(28px,4vw,42px);margin-bottom:18px;}
   p{margin-bottom:18px;}
@@ -54,10 +54,10 @@
   .trustbar div::before{content:"✓";color:var(--green);font-weight:700;margin-right:7px;}
 
   /* Empathy */
-  .empathy{background:var(--navy);color:#e9eef5;}
-  .empathy h2{color:#fff;}
-  .empathy p{color:#c6d2e0;font-size:18px;}
-  .empathy .turn{color:#fff;font-weight:600;font-size:20px;}
+  .empathy{background:var(--cream);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .empathy h2{color:var(--navy);}
+  .empathy p{color:var(--ink);font-size:19px;}
+  .empathy .turn{color:var(--navy);font-weight:600;font-size:21px;}
 
   /* Steps */
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:44px 0;}
@@ -94,15 +94,16 @@
   .vidrow .video{margin:0;}
 
   /* Proof */
-  .proof{background:var(--navy);color:#dbe4ef;}
+  .proof{background:var(--navy);color:#eef3f9;}
   .proof h2{color:#fff;}
+  .proof p{color:#eef3f9;}
   .proof-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin:48px 0;}
-  .pstat{text-align:center;padding:28px 14px;background:rgba(255,255,255,.06);border-radius:14px;}
-  .pstat .big{font-family:'Fraunces',serif;font-size:clamp(26px,3.4vw,40px);font-weight:700;color:var(--amber);display:block;}
-  .pstat .lbl{font-size:13.5px;color:#a9b8ca;margin-top:6px;display:block;}
-  .indbox{background:rgba(255,255,255,.06);border-left:4px solid var(--amber);border-radius:0 14px 14px 0;padding:28px 32px;margin:36px 0;}
-  .indbox h3{color:#fff;font-size:20px;margin-bottom:12px;}
-  .indbox li{margin:8px 0 8px 20px;color:#c6d2e0;}
+  .pstat{text-align:center;padding:28px 14px;background:rgba(255,255,255,.09);border-radius:14px;}
+  .pstat .big{font-family:'Fraunces',serif;font-size:clamp(26px,3.4vw,40px);font-weight:700;color:#fff;display:block;}
+  .pstat .lbl{font-size:15px;color:#dbe4ef;margin-top:6px;display:block;}
+  .indbox{background:rgba(255,255,255,.09);border-left:4px solid #fff;border-radius:0 14px 14px 0;padding:28px 32px;margin:36px 0;}
+  .indbox h3{color:#fff;font-size:21px;margin-bottom:12px;}
+  .indbox li{margin:9px 0 9px 20px;color:#eef3f9;}
 
   /* Compare */
   .compare table{width:100%;border-collapse:collapse;margin-top:36px;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 6px 24px rgba(22,40,63,.08);}
@@ -138,8 +139,8 @@
   .close-sec{text-align:center;}
   .close-sec .ps{max-width:640px;margin:30px auto 0;font-style:italic;color:var(--soft);}
 
-  footer{background:var(--navy);color:#8fa1b5;padding:56px 0;font-size:13px;line-height:1.7;}
-  footer strong{color:#c6d2e0;}
+  footer{background:var(--navy);color:#c3cfdc;padding:56px 0;font-size:14.5px;line-height:1.75;}
+  footer strong{color:#eef3f9;}
 
   @media(max-width:860px){
     .steps,.bgrid,.tgrid,.hgrid{grid-template-columns:1fr;}
@@ -340,7 +341,7 @@
 <section class="proof">
   <div class="wrap">
     <div class="narrow" style="text-align:center;">
-      <span class="eyebrow" style="color:var(--amber);">The Proof Behind the Promise</span>
+      <span class="eyebrow" style="color:#ffffff;">The Proof Behind the Promise</span>
       <h2>This Isn't a Gadget. It's a Medical Device That Can Prove It.</h2>
     </div>
     <div class="proof-stats">
