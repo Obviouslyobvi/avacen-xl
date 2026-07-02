@@ -523,5 +523,11 @@
   </div>
 </footer>
 
+<script>
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.addEventListener('pageshow', function () {
+    if (!location.hash) window.scrollTo(0, 0);
+  });
+</script>
 </body>
 </html>
